@@ -1,0 +1,68 @@
+@use '../../../styles/global.scss' as *;
+
+.top {
+    background-image: url(../bg-top.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    padding: 4rem 8px;
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        text-align: center;
+
+        img {
+            max-width: 12.5rem;
+        }
+
+        h1 {
+            max-width: 87.2rem;
+            font-size: 4.8rem;
+            letter-spacing: -1.5px;
+            line-height: 98%;
+        }
+    }
+
+    #br {
+        display: none;
+    }
+    
+    // RESPONSIVIDADE(.top):
+
+    // Tablets baixa resolução
+    @media screen and (max-width: 646px) {   
+        padding: 33px 8px;  
+
+        .grid {
+            h1 {
+                // max-width: 87.2rem;
+                // font-size: 4.8rem;
+                // letter-spacing: -1.5px;
+                // line-height: 98%;
+
+                font-size: 26px;
+                line-height: 100%; /* 26px */
+            }
+        }
+    }
+
+    // Mobile geral
+    @media screen and (max-width: 450px) {   
+
+        .grid {
+            // img {
+            //     max-width: 121px;
+            // }
+            h1 {
+                max-width: 271px;
+            }
+        }
+
+        #br {
+            display: inline;
+        }
+    }
+}

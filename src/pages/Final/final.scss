@@ -1,0 +1,281 @@
+@use '../../styles/global.scss' as *;
+
+.Final-container {
+
+    .previa-body
+    {
+        border-top: 4px solid #ec0000;
+        background: url(bg_preview.png) no-repeat center;
+        background-size: contain;
+
+        .grid {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5rem;
+            text-align: center;
+            justify-content: space-evenly;
+
+            .item
+            {
+                align-self: start;
+                display: table-cell;
+                vertical-align: text-top;
+                text-align: left;
+                max-width: 87.2rem;
+            }
+
+            .item-img-big
+            {
+                margin-top: 3rem;
+                margin-right: 13rem;
+                text-align: left;
+                align-self: start;
+
+            }
+
+            .item-previa
+            {
+                width: 100% !important;
+                max-width: 60rem !important;
+            }
+
+            .item-texto
+            {
+                margin-top: -7.5rem;
+                font-family: $font-main;
+                font-size: 1.35rem;
+                text-align: start;
+                text-wrap: none;
+                letter-spacing: 0.5px;
+                color: #000;
+                line-height: 2.3rem;
+                min-width: 30rem;
+            }
+
+            .item-texto-2
+            {
+                margin-top: -6rem;
+                line-height: 2.2rem;
+                min-width: 40rem;
+                margin-left: -8rem;
+            }
+
+            .item-texto-3
+            {
+                margin-left: -0rem;
+            }
+
+            .item-texto-4
+            {
+                margin-top: -16rem;
+                margin-left: -8rem;
+            }
+
+            .item-texto-bottom-2
+            {
+                margin-top: -2rem;
+                line-height: 2.2rem;
+                min-width: 40rem;
+                margin-left: -8rem;
+            }
+
+            .item-texto-bottom-4
+            {
+                margin-top: -8rem;
+                min-width: 40rem;
+                margin-left: -8rem;
+            }
+
+            .item-logo
+            {
+                margin-top: -5rem;
+                width: 19rem;
+            }
+
+            .item-logo-2
+            {
+                margin-top: -4.3rem;
+                margin-left: -10rem;
+
+            }
+
+            .texto-titulo
+            {
+                font-family: $font-main;
+                font-size: 3.8rem;
+                font-weight: 700;
+                text-align: left;
+                letter-spacing: -0.4px;
+                color: #000;
+                margin-top: 8rem;
+                margin-bottom: 10rem;
+                margin-left: 49rem;
+                flex-grow:2;
+                justify-self: right;
+            }
+            .texto-titulo-libertadores
+            {
+                margin-left: 39rem;
+            }
+        }
+        .grid-bottom
+        {
+            margin-bottom: 5rem;
+        }
+        .grid-top
+        {
+            padding-top: 8rem;
+        }
+    }
+
+    // RESPONSIVIDADE(.ConteudoInicial-container):
+
+    // Tablets alta resolução
+    @media screen and (max-width: 990px) {
+
+        .previa-body {
+            .grid-top
+            {
+                gap: 0rem;
+            }
+
+            .grid-bottom
+            {
+                gap: 0rem;
+            }
+            .grid {
+                .item-previa {
+                    filter: none;
+                    width: 50rem;
+                }
+                .item-texto
+                {
+                    margin: 5rem;
+                }
+                .item-img-big
+                {
+                    margin-right: 0rem;
+                    text-align: center;
+                    align-self: center;
+                }
+
+                .item-logo
+                {
+                    margin-top: -4.3rem;
+                    margin-left: -10rem;
+                }
+
+                .texto-titulo
+                {
+                    margin-left: 10rem;
+                }
+
+                .item-logo-2
+                {
+                    margin-top: -4.3rem;
+                    margin-left: -10rem;
+                }
+            }
+        }
+    }
+
+
+    // Tablets baixa resolução
+    @media screen and (max-width: 646px) {
+
+        .previa-body {
+            .grid-top
+            {
+                gap: 0rem;
+                padding-top: 0rem;
+            }
+            .grid {
+                flex-direction: column;
+                .item
+                {
+                    align-self: center;
+                }
+                .item-previa {
+                    filter: none;
+                    width: 50rem;
+                    padding-bottom: 3rem;
+                }
+                .item-img-big
+                {
+                    margin-right: 0rem;
+                    text-align: center;
+                    align-self: center;
+                }
+                .item-texto
+                {
+                    margin: 0rem;
+                    padding-bottom: 3rem;
+                    font-size: 2.35rem;
+                }
+
+                .item-texto-2
+                {
+                    margin: 0rem;
+                    padding-bottom: 3rem;
+                    font-size: 1.8rem;
+                }
+                .item-texto-bottom-2
+                {
+                    margin: 0rem;
+                    padding-bottom: 3rem;
+                    font-size: 1.8rem;
+                }
+                .item-logo
+                {
+                    margin: 2.5rem;
+                    width: 30rem;
+                    align-self: start;
+                }
+                .texto-titulo
+                {
+                    margin: 0rem;
+                    margin-bottom: 3rem;
+
+                }
+            }
+        }
+
+
+
+    }
+
+    // Mobile geral
+    @media screen and (max-width: 450px) {
+
+        .previa-body {
+            .grid-top
+            {
+                gap: 0rem;
+                padding-top: 0rem;
+            }
+            .grid {
+                flex-direction: column;
+
+                .item {
+                    align-self: center;
+                }
+
+                .item-texto
+                {
+                    margin: 0rem;
+                    padding-left: 3rem;
+                    padding-right: 3rem;
+                    padding-bottom: 0rem;
+                    font-size: 2.35rem;
+                }
+
+                .texto-titulo
+                {
+                    font-size: 3.5rem;
+                }
+
+            }
+        }
+    }
+}
